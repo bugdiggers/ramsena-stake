@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+ 
+:root {
+  --primary-gradient: linear-gradient(90deg, #a2a24b 0%, #E1B336 96.4%);
+  --Hero-card-gradient: linear-gradient(90deg, #D2F1F9 0%, #E1B336 96.4%);
+  --primary-color: #E1B63E;
+  --secondry1-color: #ab53ea;
+  --secondry-color: #5943e1;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+  font-family: sf-ui-pro;
+}
+@font-face {
+  font-family: sf-ui-pro;
+  src: url("./assets/font/sf-ui-display-medium-58646be638f96.otf");
+}
+
+
+
+#hero-right-container {
+  background: linear-gradient(
+    180deg,
+    #bbd9e0 2.26%,
+    #bd972d 96.92%
+  );
+  box-shadow: 0px 0px 10px 0px #E1B336;
+  backdrop-filter: blur(2px);
+}
+#banner-inner{
+    /* padding: 20px; */
+    background-color: rgba(0, 0, 0, 0.717);
+    box-shadow: #3c3c3c 0px 3px 5px 2px;
+}
+
+ 
+.text-primary-gradient {
+  background: var(--primary-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+ 
+
+
+
+
+
+
+.box2
+{
+    width: 100%;
+    background: linear-gradient(90deg, rgb(23, 23, 23) 10%, #d39505 96.4%);
+    min-height: 250px;
+   clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
+    margin: 0 auto;
+}
+.box3
+{
+    width: 100%;
+    background: linear-gradient(90deg, #d39505 10%,  rgb(23, 23, 23) 96.4%);
+    min-height: 250px;
+    clip-path: polygon(10% 0, 100% 0, 100% 50%, 100% 100%, 10% 100%, 0 45%);
+    margin: 0 auto;
+}
+
+.flt_svg {
+    visibility: hidden; 
+    position: absolute;
+    width: 0px;
+    height: 0px;
+}
+
+.box_parent
+{
+    filter: url('#flt_tag');
+}
+
+@media (max-width: 767px) {
+   .box2
+    {
+      background: linear-gradient(0deg, rgb(23, 23, 23) 10%, #d39505 96.4%);
+        clip-path: polygon(50% 0, 100% 10%, 100% 100%, 50% 90%, 0 100%, 0 10%);
+    }
+   .box3
+    {
+      background: linear-gradient(0deg, rgb(23, 23, 23) 10%, #d39505 96.4%);
+        clip-path: polygon(50% 0, 100% 10%, 100% 100%, 50% 90%, 0 100%, 0 10%);
+    }
+  
+}
